@@ -1,4 +1,4 @@
-package jobsheet11.Praktikum1;
+package jobsheet11.Praktikum2;
 
 public class SingleLinkedList23 {
     NodeMahasiswa23 head, tail;
@@ -60,6 +60,52 @@ public class SingleLinkedList23 {
             }
             temp.next = new NodeMahasiswa23(input, temp.next);
             if (temp.next.next == null) tail = temp.next;
+        }
+    }
+
+    // GET DATA
+    public void getData(int index) {
+        NodeMahasiswa23 tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        tmp.data.tampilInformasi();
+    }
+
+    // INDEX OF
+    public int indexOf(String key) {
+        NodeMahasiswa23 tmp = head;
+        int index = 0;
+        while (tmp != null && !tmp.data.nama.equalsIgnoreCase(key)) {
+            tmp = tmp.next;
+            index++;
+        }
+        return (tmp == null) ? -1 : index;
+    }
+
+    // REMOVE FIRST
+    public void removeFirst() {
+        if (head == tail) head = tail = null;
+        else head = head.next;
+    }
+
+    // REMOVE LAST
+    public void removeLast() {
+        NodeMahasiswa23 temp = head;
+        while (temp.next != tail) temp = temp.next;
+        temp.next = null;
+        tail = temp;
+    }
+
+    // REMOVE AT
+    public void removeAt(int index) {
+        if (index == 0) removeFirst();
+        else {
+            NodeMahasiswa23 temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
         }
     }
 }

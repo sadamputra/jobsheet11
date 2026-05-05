@@ -1,4 +1,4 @@
-package jobsheet11.Praktikum1;
+package jobsheet11.Praktikum2;
 
 public class SLLMain23 {
     public static void main(String[] args) {
@@ -10,13 +10,25 @@ public class SLLMain23 {
         Mahasiswa23 m3 = new Mahasiswa23("3", "Cintia", "3C", 3.5);
         Mahasiswa23 m4 = new Mahasiswa23("4", "Bimon", "2B", 3.8);
 
-        sll.print();
         sll.addFirst(m1);
-        sll.print();
         sll.addLast(m2);
-        sll.print();
         sll.insertAfter("Dirga", m3);
         sll.insertAt(2, m4);
+
+        sll.print();
+
+        System.out.println("Data index 1:");
+        sll.getData(1);
+
+        System.out.println("Index Bimon: " + sll.indexOf("Bimon"));
+
+        sll.removeFirst();
+        sll.print();
+
+        sll.removeLast();
+        sll.print();
+
+        sll.removeAt(0);
         sll.print();
     }
 }

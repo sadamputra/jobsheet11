@@ -1,4 +1,4 @@
-package jobsheet11.Praktikum1;
+package jobsheet11.Praktikum2;
 
 public class NodeMahasiswa23 {
     Mahasiswa23 data;

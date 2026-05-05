@@ -1,17 +1,15 @@
-package jobsheet11.Praktikum1;
+package jobsheet11.Tugas;
 
 public class Mahasiswa23 {
     String nim, nama, kelas;
-    double ipk;
 
-    public Mahasiswa23(String nim, String nama, String kelas, double ipk) {
+    public Mahasiswa23(String nim, String nama, String kelas) {
         this.nim = nim;
         this.nama = nama;
         this.kelas = kelas;
-        this.ipk = ipk;
     }
 
-    public void tampilInformasi() {
-        System.out.println(nama + "\t" + nim + "\t" + kelas + "\t" + ipk);
+    public void tampil() {
+        System.out.println(nama + " | " + nim + " | " + kelas);
     }
 }
